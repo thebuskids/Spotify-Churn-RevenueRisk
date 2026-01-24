@@ -6,6 +6,8 @@ This project analyzes the 2025 [Spotify user dataset](www.kaggle.com/datasets/na
 
 To quantify the business impact, a Monte Carlo simulation was implemented, which identified approximately $6.3k/month in terms of revenue risk for this specific cohort, which could provide actionable insights for retention-focused teams. 
 
+##
+
 ### Key Insights & Business Recommendations
 - **"Value Gap" for Older Users**: Cluster 1 - Premium Mature (average age 46) are users on paid tiers but exhibited highest churn rate (27.5%) and highest skip rates. This could be due to the recommendation algorithm being biased toward younger demographics.
 - **Recommendation Interventions to target 2 groups of users over 40**: 
@@ -13,12 +15,16 @@ To quantify the business impact, a Monte Carlo simulation was implemented, which
     - Existing users: "Reset algorithm" feature specifically for users who consecutively skipped more than a predefined threshold of songs.
 - **Revenue at Risk**: Stoachstic modeling showed that just purely based on random chance of churn within the at-risk Cluster 1 users could lead to a revenue swing of ±$500/month, adding up over time if not addressed.
 
+##
+
 ### Tech Stack
 - **Analysis**: Python (Pandas, NumPy, Scikit-Learn)
 - **Dimensionality Reduction**: PCA (Principal Component Analysis)
 - **Clustering**: K-Means (Optimized via Elbow/Knee Method & Silhouette Score)
 - **Risk Modeling**: Monte Carlo Simulation
 - **Visualization**: Matplotlib, Seaborn
+
+##
 
 ### Methodology
 1\. **Exploratory Data Analysis (EDA) & Data Preprocessing**
@@ -39,6 +45,8 @@ To quantify the business impact, a Monte Carlo simulation was implemented, which
 
 4\. **Financial Risk Modeling**
 - Focusing on the identified "most at-risk" cluster of users (Cluster 1 - Premium Mature) with a probability of churn of 27.5%, the Monte Carlo method was used to simulate 10,000 possible churn outcomes to observe the distribution of revenue lost if left unaddressed.
+
+##
 
 ### Limitations & Future Work
 - **Missing Temporal Data**: The data is a snapshot of a period in 2025, which means we only see a user's behavior at that point in time. Future work with more data could incorporate time-series analysis to see how a user's behavior changes and if a pattern emerges leading to churn.
